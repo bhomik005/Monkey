@@ -6,7 +6,7 @@ import (
 )
 
 func TestNextToken(t *testing.T) {
-	// test input the lexer
+	// test input to the lexer
 	input := `=+(){},;`
 
 	// TestTokenType struct

@@ -2,13 +2,17 @@ package token
 
 type TokenType string
 
-// token is going to store the token type and literal string
+/**
+ * token struct stores the token type and token literal string
+ */
 type Token struct {
 	Type    TokenType
 	Literal string
 }
 
-// declaring the possible token types as constants
+/**
+ * declaring the possible token types as string constants
+ */
 const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
