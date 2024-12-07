@@ -3,9 +3,9 @@ package lexer
 import "monkey/token"
 
 /**
- * Potential improvements in lexer
- * It support the ASCII characters which are 8 bits wide
- * To support the Unicode and UTF-8 characters, we would need to change teh ch from byte (8 bits) to rune (32 bits wide)
+ * potential improvements in lexer
+ * it support the ASCII characters which are 8 bits wide
+ * to support the Unicode and UTF-8 characters, we would need to change the ch from byte (8 bits) to rune (32 bits wide)
  */
 type Lexer struct {
 	input        string
