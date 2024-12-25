@@ -42,9 +42,9 @@ thorsten["name"]  // => "Thorsten"
 
 - Function that adds two numbers (binding functions to names). Functions in monkey are just like values and this is called "first class functions"
 ```
-let add = fn(a, b) { return a + b; } // explicit return 
-let add = fn(a, b) { a + b;)         // implicit return
-add(1, 2);                           // calling a function   
+let add = fn(a, b) { return a + b; }  // explicit return 
+let add = fn(a, b) { a + b; }         // implicit return
+add(1, 2);                            // calling a function   
 ```
 
 - Supports recursion
