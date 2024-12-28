@@ -6,6 +6,7 @@ type Node interface {
 	TokenLiteral() string
 }
 
+// there are two different types of nodes - statement and expression
 type Statement interface {
 	Node
 	statementNode()
@@ -16,11 +17,12 @@ type Expression interface {
 	expressionNode()
 }
 
+// first implementation of the Node
 type Program struct {
-	// Program is an array of statements
 	Statements []Statement
 }
 
+// Program is implementing the node interface
 func (p *Program) TokenLiteral() string {
 	if len(p.Statements) > 0 {
 		return p.Statements[0].TokenLiteral()
@@ -29,20 +31,23 @@ func (p *Program) TokenLiteral() string {
 	}
 }
 
-type Identifier struct {
-	Token token.Token // the token.IDENT token
-	Value string      // token literal
-}
-
+// let x = 5 + 5;
+// <token> <identifier> = <expression>
 type LetStatement struct {
-	Token token.Token // the token.Let token
+	Token token.Token
 	Name  *Identifier
-	Value Expression // it has to implement the node interface
+	Value Expression
 }
 
 func (ls *LetStatement) statementNode() {}
 func (ls *LetStatement) TokenLiteral() string {
 	return ls.Token.Literal
+}
+
+// IDENT token and literal value
+type Identifier struct {
+	Token token.Token
+	Value string
 }
 
 func (i *Identifier) expressionNode() {}
