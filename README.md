@@ -1,10 +1,16 @@
 ## The Monkey Programming Language & Interpreter
 
-I am reading this amazing book written by Thorsten Ball - https://interpreterbook.com/  
-We are going to build a tree-walking interpreter that - 
+### Introduction
+
+
+In this project, we will learn how to build an interpreter from scratch. This exercise is invaluable for gaining insight into how programming languages function under the hood and provides a solid foundation for creating your own programming language. We are going to achieve this by reading this amazing book written by Thorsten ball - https://interpreterbook.com/.
+
+There is a difference between an interpreter and a compiler - an interpreter takes source code as input and produces an output without generating any intermediary byte-code or machine code. However, a compiler takes source code as input and produces a byte-code before generating an output. We are going to build a tree walking interpreter that -
+
 - Parse the source code
 - Builds an AST (Abstract Syntax Tree)
-- Evaluate the tree 
+- Evaluate the tree
+
 
 ### Monkey will have the following features
 
