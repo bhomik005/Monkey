@@ -83,11 +83,43 @@ twice(addTwo, 2); // => 6
 
 ### Monkey will have the following components -
 
-1. [ ] Lexer
+1. [x] Lexer
 2. [ ] Parser
 3. [ ] Abstract Syntax Tree (AST)
 4. [ ] the internal object system
 5. [ ] the evaluator
+
+
+### Lexer
+
+Lexer is the first component we need to build and it is responsible for lexing the input. It will take the source code as input and convert that into tokens. We need to represent our source code in other forms that are easier to work with. So, we are going to change the representation of our source code two times before we evaluate it. The first transformation, from source code to tokens, is called “lexical analysis”, or “lexing” for short. Tokens then fed to the parser, which does the second transformation and turns the tokens into an “Abstract Syntax Tree”.
+
+<div style="text-align: center;">
+    <img src="images/lexer.png" alt="lexer">
+</div>
+
+This is the input one gives to a lexer -
+<div style="text-align: center;">
+    <img src="images/lexer_input.png" alt="lexer_input">
+</div>
+
+and here is the output - 
+<div style="text-align: center;">
+    <img src="images/lexer_output.png" alt="lexer_output">
+</div>
+
+### Parser
+
+A parser is a software component that takes input data and builds a data structure - often some kind of parse tree, abstract syntax tree or hierarchical structure -giving a structural representation of the input, checking for correct syntax in the process.
+
+<div style="text-align: center;">
+    <img src="images/parser.png" alt="parser">
+</div>
+
+
+
+
+
 
 
 
